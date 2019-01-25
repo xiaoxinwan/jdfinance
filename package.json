@@ -1,5 +1,5 @@
 {
-  "name": "JDFinance",
+  "name": "jdfinance",
   "version": "1.0.0",
   "description": "component with vue 2.5 and es6",
   "main": "index.js",
@@ -11,17 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/imooc/vuejs.git"
+    "url": "git@github.com:xiaoxinwan/jdfinance.git"
   },
   "keywords": [
     "es6",
     "component"
   ],
-  "author": "cuc_ygh@163.com",
+  "author": "xiaoxinwan",
   "license": "MIT",
-  "bugs": {
-    "url": "https://gitlab.com/imooc/vuejs/issues"
-  },
   "eslintConfig": {
     "root": true,
     "parserOptions": {
