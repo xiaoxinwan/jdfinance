@@ -1,5 +1,5 @@
 <template>
-  <Panel :class="$style.panel">
+  <Panel title="公司信息" :class="$style.panel">
     <ul :class="$style.content">
       <li>
         <img
@@ -39,15 +39,24 @@
 </template>
 
 <script>
-export default {};
+import Panel from "../core/panel.vue";
+
+export default {
+  components: {
+    Panel
+  }
+};
 </script>
 
 <style lang="scss" module>
 @import "../../css/element.scss";
 .panel {
   @include panel;
+  margin-bottom: 100px;
   .content {
     @include flex;
+    background: #f5f5f5;
+    
     li {
       width: 100%;
       text-align: center;
@@ -57,20 +66,20 @@ export default {};
         width: 100%;
         height: 143px;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         @include flex(row);
         height: 186px;
         box-sizing: border-box;
-        > div{
+        > div {
           width: 33.33333%;
           text-align: center;
           box-sizing: border-box;
           padding-top: 20px;
-          > img{
+          > img {
             width: 90px;
             height: 90px;
           }
-          p{
+          p {
             font-size: 26px;
             text-align: center;
             display: block;
@@ -79,11 +88,10 @@ export default {};
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
-
           }
         }
       }
-      &:nth-child(n+3){
+      &:nth-child(n + 3) {
         padding: 24px 0;
         height: 38px;
         line-height: 38px;
