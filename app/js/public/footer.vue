@@ -1,5 +1,5 @@
 <template>
-  <Panel title="公司信息" :class="$style.panel">
+  <Panel title="公司信息" :class="[$style.panel,cname]">
     <ul :class="$style.content">
       <li>
         <img
@@ -44,6 +44,12 @@ import Panel from "../core/panel.vue";
 export default {
   components: {
     Panel
+  },
+  props:{
+    cname: {
+      type: String,
+      default: ''
+    }
   }
 };
 </script>
@@ -53,6 +59,9 @@ export default {
 .panel {
   @include panel;
   margin-bottom: 100px;
+  &>h4{
+    display: none;
+  }
   .content {
     @include flex;
     background: #f5f5f5;
